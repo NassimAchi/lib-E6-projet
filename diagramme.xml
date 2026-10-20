@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Cas d&#39;utilisation" id="use-case-diagram">
+    <mxGraphModel dx="1407" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fillColor=none;" value="Système de casiers connectés" vertex="1">
+          <mxGeometry height="860" width="900" x="170" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="actUser" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Utilisateur&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="60" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="actAdmin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Administrateur" vertex="1">
+          <mxGeometry height="60" width="30" x="60" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="ucEmprunter" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Emprunter un moyen" vertex="1">
+          <mxGeometry height="60" width="200" x="220" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ucRetourner" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Retourner un moyen" vertex="1">
+          <mxGeometry height="60" width="200" x="230" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="ucOuvrir" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Ouvrir un compartiment" vertex="1">
+          <mxGeometry height="60" width="200" x="530" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ucStatut" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Mettre à jour le statut du moyen" vertex="1">
+          <mxGeometry height="70" width="200" x="530" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="ucAuth" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="S&#39;authentifier par badge RFID" vertex="1">
+          <mxGeometry height="60" width="220" x="830" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ucHisto" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Historiser l&#39;événement" vertex="1">
+          <mxGeometry height="70" width="220" x="830" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ucCasiers" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Gérer les casiers" vertex="1">
+          <mxGeometry height="70" width="220" x="220" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="ucCle" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Régénérer la clé API du casier" vertex="1">
+          <mxGeometry height="60" width="220" x="540" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="ucEmplacements" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Consulter les emplacements" vertex="1">
+          <mxGeometry height="60" width="220" x="270" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="ucBadge" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Associer un badge RFID à un utilisateur" vertex="1">
+          <mxGeometry height="60" width="220" x="270" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="ucSuivi" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Suivre l&#39;occupation et l&#39;état des casiers" vertex="1">
+          <mxGeometry height="70" width="220" x="270" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="ucConsulterHisto" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Consulter l&#39;historique" vertex="1">
+          <mxGeometry height="60" width="220" x="220" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="gen1" edge="1" parent="1" source="actAdmin" style="endArrow=block;endFill=0;html=1;" target="actUser">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="actUser" style="endArrow=none;html=1;" target="ucEmprunter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="actUser" style="endArrow=none;html=1;" target="ucRetourner">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="actAdmin" style="endArrow=none;html=1;" target="ucCasiers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="actAdmin" style="endArrow=none;html=1;" target="ucEmplacements">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="actAdmin" style="endArrow=none;html=1;" target="ucBadge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="actAdmin" style="endArrow=none;html=1;" target="ucSuivi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="actAdmin" style="endArrow=none;html=1;" target="ucConsulterHisto">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i1" edge="1" parent="1" source="ucEmprunter" style="dashed=1;endArrow=open;endFill=0;html=1;" target="ucOuvrir" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i2" edge="1" parent="1" source="ucRetourner" style="dashed=1;endArrow=open;endFill=0;html=1;" target="ucOuvrir" value="«include»">
+          <mxGeometry relative="1" x="0.6221" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="i3" edge="1" parent="1" source="ucOuvrir" style="dashed=1;endArrow=open;endFill=0;html=1;" target="ucAuth" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4" edge="1" parent="1" source="ucOuvrir" style="dashed=1;endArrow=open;endFill=0;html=1;" target="ucHisto" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i5" edge="1" parent="1" source="ucEmprunter" style="dashed=1;endArrow=open;endFill=0;html=1;" target="ucStatut" value="«include»">
+          <mxGeometry relative="1" x="-0.6273" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="i6" edge="1" parent="1" source="ucRetourner" style="dashed=1;endArrow=open;endFill=0;html=1;" target="ucStatut" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i7" edge="1" parent="1" source="ucStatut" style="dashed=1;endArrow=open;endFill=0;html=1;" target="ucHisto" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="ucCle" style="dashed=1;endArrow=open;endFill=0;html=1;" target="ucCasiers" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
