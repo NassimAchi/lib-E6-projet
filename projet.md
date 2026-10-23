@@ -11,7 +11,7 @@ Le projet E6 consiste à connecter des casiers physiques à cette GMAO. Chaque c
 Un casier connecté basé sur un ESP32 qui doit :
 - authentifier un utilisateur grâce à son badge RFID;
 - n'ouvrir que les compartiments auxquels cet utilisateur a droit;
-- remonter chaque ouverture à la GMAO pour mettre à jour la disponibilité du matériel;
+- remonter chaque ouverture à la GMAO pour maintenir un historique;
 - être administré depuis l'interface web existante.
 
 ### Objectifs
@@ -25,7 +25,6 @@ Un casier connecté basé sur un ESP32 qui doit :
 
 1. **Authentification par badge.** L'ESP32 lit l'UID et l'envoie à la GMAO, retrouve l'utilisateur et vérifie que son compte est actif.
 2. **Ouverture contrôlée des serrures.** Le badge ouvre tous les emplacements actifs dont l'utilisateur détient l'acces.
-3. **Emprunts et retours.** Quand le moyen est sorti/retourné la GMAO met à jour son statut.
 4. **Administration.**
    - Créer, modifier et supprimer des casiers ; les rattacher à un site, une salle et des plateaux techniques.
    - Régénérer la clé API d'un casier.
